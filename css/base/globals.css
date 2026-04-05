@@ -1,0 +1,71 @@
+.html__page {
+	font-family: var(--font-family);
+	font-weight: 400;
+	scroll-behavior: smooth;
+	color: var(--main-color);
+}
+.body__page {
+	min-width: 320px;
+}
+.container {
+	width: min(var(--container-width), 100% - var(--container-padding) * 2);
+	overflow: hidden;
+	padding-inline: 15px;
+
+	margin-inline: auto;
+}
+.title {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: clamp(20px, 0.965rem + 1.38vw, 42px);
+}
+.text {
+	font-family: var(--font-family);
+	font-weight: 400;
+}
+.button {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 24px;
+}
+.section {
+	padding-top: clamp(46px, 1.526rem + 6.54vw, 150px);
+}
+.button-repetitive {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--main-color);
+	border: 1px solid #111;
+	border-radius: 3px;
+	padding: 10px 16px 10px 20px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-block: clamp(30px, 1.745rem + 0.63vw, 40px)
+		clamp(46px, 1.526rem + 6.54vw, 150px);
+	flex-basis: 1;
+	transition:
+		border var(--transition-time),
+		color var(--transition-time);
+}
+.button-repetitive::after {
+	content: "";
+	background-image: url("../../icons/reviews__scores-button.svg");
+	width: 24px;
+	height: 23px;
+	display: inline-block;
+	transition: var(--transition-time);
+}
+@media (any-hover: hover) {
+	.button-repetitive:hover {
+		border: 1px solid var(--fourth-background);
+		color: background-image var(--fourth-background);
+	}
+	.button-repetitive:hover::after {
+		content: "";
+		background-image: url("../../icons/reviews__scores-button-red.svg");
+		width: 24px;
+		height: 23px;
+	}
+}

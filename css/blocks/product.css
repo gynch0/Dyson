@@ -1,0 +1,223 @@
+.product-card-content {
+	box-shadow: 0 4px 41px 0 rgba(4, 4, 4, 0.05);
+	background-color: var(--secondary-color);
+}
+.product-card {
+	padding-block: clamp(46px, 1.426rem + 6.62vw, 150px)
+		clamp(46px, 1.426rem + 6.62vw, 150px);
+	background: #f8f8f8;
+	overflow: visible;
+	position: relative;
+}
+/* Слайдер товаров — разметка задаётся Swiper */
+.product-container.swiper {
+	overflow: hidden;
+	padding-bottom: 50px;
+}
+
+.product-swiper .swiper-slide {
+	height: auto;
+}
+/* .swiper-button-next {
+}
+.swiper-button-prev {
+	margin-right: 25px;
+} */
+.product-swiper .swiper-button-prev,
+.product-swiper .swiper-button-next {
+	color: var(--main-color);
+}
+
+.product-card .container {
+	overflow: visible;
+	position: relative;
+}
+
+@media (max-width: 780px) {
+	.product-card .container {
+		padding-left: 50px;
+		padding-right: 50px;
+		overflow: visible;
+	}
+}
+
+@media (max-width: 480px) {
+	.product-card .container {
+		padding-left: 40px;
+		padding-right: 40px;
+		overflow: visible;
+	}
+}
+
+.product-card .container .swiper-button-prev,
+.product-card .container .swiper-button-next {
+	color: var(--main-color);
+	width: 44px;
+	height: 44px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10;
+	margin-top: 0;
+}
+
+.product-card .container .swiper-button-prev {
+	left: -25px;
+}
+
+.product-card .container .swiper-button-next {
+	right: -25px;
+}
+
+.product-card .container .swiper-button-prev::after,
+.product-card .container .swiper-button-next::after {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+@media (width <= 1024px) {
+	.product-card .container .swiper-button-prev,
+	.product-card .container .swiper-button-next {
+		width: 36px;
+		height: 36px;
+	}
+
+	.product-card .container .swiper-button-prev {
+		left: -20px;
+	}
+
+	.product-card .container .swiper-button-next {
+		right: -20px;
+	}
+
+	.product-card .container .swiper-button-prev::after,
+	.product-card .container .swiper-button-next::after {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 780px) {
+	.product-card .container .swiper-button-prev,
+	.product-card .container .swiper-button-next {
+		width: 32px;
+		height: 32px;
+	}
+
+	.product-card .container .swiper-button-prev {
+		left: 5px;
+	}
+
+	.product-card .container .swiper-button-next {
+		right: 5px;
+	}
+
+	.product-card .container .swiper-button-prev::after,
+	.product-card .container .swiper-button-next::after {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.product-card .container .swiper-button-prev,
+	.product-card .container .swiper-button-next {
+		width: 28px;
+		height: 28px;
+	}
+
+	.product-card .container .swiper-button-prev {
+		left: 0;
+	}
+
+	.product-card .container .swiper-button-next {
+		right: 0;
+	}
+
+	.product-card .container .swiper-button-prev::after,
+	.product-card .container .swiper-button-next::after {
+		font-size: 12px;
+	}
+}
+
+.product-swiper .swiper-pagination-bullet-active {
+	background: var(--main-color,);
+}
+
+@media (width <= 780px) {
+	.product-card-link img {
+		width: 170px;
+		height: 170px;
+	}
+	.product-container {
+		padding-bottom: 40px;
+	}
+}
+
+.product-card-title {
+	font-size: 30px;
+	font-family: var(--second-family);
+	font-weight: 900;
+	color: var(--main-color);
+}
+@media (width <= 780px) {
+	.product-card-title {
+		font-size: 13px;
+	}
+}
+.product-card-text {
+	padding-block: 11px 30px;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 24px;
+	color: var(--main-color);
+	display: flex;
+	gap: 21px;
+	align-items: center;
+}
+@media (width <= 780px) {
+	.product-card-text {
+		font-size: 11px;
+	}
+	.product-card-arrow {
+		width: 11px;
+		height: 11px;
+	}
+}
+/* .product-card-text::after {
+	content: "";
+	position: relative;
+	top: 7px;
+	left: 20px;
+	background-image: url("../../icons/product-card-stroke.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+} */
+
+.inner__wrapper {
+	padding-top: 19px;
+	padding-left: 40px;
+	transition:
+		background-color var(--transition-time),
+		color var(--transition-time);
+}
+/* .inner__wrapper:hover {
+} */
+
+@media (any-hover: hover) {
+	.inner__wrapper:hover {
+		background-color: var(--main-color);
+	}
+	.inner__wrapper:hover .product-card-title {
+		color: var(--secondary-color);
+	}
+	.inner__wrapper:hover .product-card-text {
+		color: var(--secondary-color);
+		cursor: pointer;
+	}
+
+	.product-card-text:hover .product-card-arrow {
+		stroke: currentColor;
+	}
+}

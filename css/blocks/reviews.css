@@ -1,0 +1,205 @@
+.reviews__title {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: clamp(25px, 0.965rem + 1.38vw, 42px);
+	color: var(--main-color);
+	padding-bottom: 20px;
+}
+.reviews__title span {
+	color: var(--fourth-background);
+}
+.reviews__stars {
+	display: flex;
+}
+.reviews__stars-name {
+	display: flex;
+	flex-direction: column;
+}
+.reviews__scores-name {
+	font-family: var(--font-family);
+	font-weight: 500;
+	padding-bottom: clamp(6px, 0.258rem + 0.57vw, 15px);
+	font-size: clamp(16px, 0.818rem + 0.88vw, 30px);
+}
+.reviews__stars-button {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: clamp(11px, 0.594rem + 0.75vw, 24px);
+	border: 1px solid #111;
+	border-radius: 3px;
+	padding: 10px 20px;
+	transition:
+		background var(--transition-time),
+		color var(--transition-time);
+}
+
+@media (any-hover: hover) {
+	.reviews__stars-button:hover {
+		background: #ababab;
+		color: var(--third-background);
+	}
+}
+.reviews__stars-icon {
+	min-width: 213px;
+	padding-right: 70px;
+}
+.reviews__scores-info-title {
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: clamp(12px, 0.646rem + 0.5vw, 20px);
+	line-height: 150%;
+	color: var(--main-color);
+	padding-top: clamp(10px, 0.236rem + 1.89vw, 40px);
+	padding-bottom: clamp(6px, 0.323rem + 0.25vw, 10px);
+}
+.reviews__scores-info-text {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: clamp(12px, 0.672rem + 0.38vw, 18px);
+	line-height: 140%;
+	color: var(--main-color);
+	padding-top: clamp(6px, 0.323rem + 0.25vw, 10px);
+	padding-bottom: clamp(20px, 1.12rem + 0.63vw, 30px);
+}
+.reviews__scores-name-top {
+	padding-top: clamp(20px, 0.991rem + 1.26vw, 40px);
+}
+.reviews__stars-icon-svg {
+	display: flex;
+}
+.reviews__scores-info-link {
+	display: block;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 18px;
+	color: var(--fourth-background);
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	padding-top: clamp(7px, 0.399rem + 0.19vw, 10px);
+}
+.reviews__stars {
+	border-bottom: 1px solid #ababab;
+	padding-bottom: clamp(20px, 0.991rem + 1.26vw, 40px);
+}
+.reviews__scores-flex-img {
+	display: flex;
+	flex-wrap: wrap;
+	gap: clamp(10px, 0.495rem + 0.63vw, 20px);
+}
+@media (width <= 600px) {
+	.reviews__stars {
+		flex-direction: column;
+	}
+	.reviews__stars-button {
+		min-width: 150px;
+		font-size: 11px;
+	}
+	.reviews__stars-2 {
+		display: flex;
+		flex-direction: row;
+	}
+	.reviews__scores-info img {
+		width: 80px;
+		height: 80px;
+	}
+	.star-svg {
+		width: 15px;
+		height: 15px;
+	}
+	.reviews__stars-icon {
+		min-width: 160px;
+	}
+}
+.button-flex {
+	display: flex;
+	justify-content: center;
+}
+.reviews__scores-button {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--main-color);
+	border: 1px solid #111;
+	border-radius: 3px;
+	padding: 10px 16px 10px 20px;
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-block: clamp(30px, 1.745rem + 0.63vw, 40px)
+		clamp(46px, 1.526rem + 6.54vw, 150px);
+	flex-basis: 1;
+}
+.reviews__scores-button::after {
+	content: "";
+	background-image: url("../../icons/reviews__scores-button.svg");
+	width: 24px;
+	height: 23px;
+	display: inline-block;
+}
+@media (max-width: 768px) {
+	.reviews__stars {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.reviews__stars-icon {
+		min-width: unset;
+		padding-right: 0;
+	}
+
+	.reviews__scores-name {
+		font-size: 18px;
+	}
+
+	.star-svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	.reviews__scores-info-title {
+		font-size: 16px;
+	}
+
+	.reviews__scores-info-text {
+		font-size: 14px;
+	}
+
+	.reviews__scores-flex-img {
+		flex-wrap: wrap;
+	}
+
+	.reviews__scores-info-img {
+		width: 70px;
+		height: 70px;
+	}
+
+	.reviews__scores-button {
+		width: 100%;
+		justify-content: center;
+		font-size: 14px;
+	}
+}
+@media (max-width: 480px) {
+	.reviews__title {
+		font-size: 22px;
+	}
+
+	.reviews__scores-name {
+		font-size: 16px;
+	}
+
+	.star-svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	.reviews__scores-info-text {
+		font-size: 13px;
+		line-height: 1.4;
+	}
+
+	.reviews__scores-info-img {
+		width: 60px;
+		height: 60px;
+	}
+}

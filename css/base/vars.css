@@ -1,0 +1,17 @@
+:root {
+	/* шрифты  */
+	--font-family: "OpenSans", sans-serif;
+	--second-family: "NAMU", sans-serif;
+	/* color */
+	--main-color: #111;
+	--secondary-color: #fff;
+	--third-background: #f8f8f8;
+	--fourth-background: #c5358c;
+	--fifth-background-color: #68ae5c;
+	--date-color: #909090;
+	/*container*/
+	--container-width: 1350px;
+	--container-padding: 15px;
+	/* transition: ; */
+	--transition-time: 0.2s;
+}

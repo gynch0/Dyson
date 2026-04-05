@@ -1,0 +1,33 @@
+.expert__opinion {
+	background-color: var(--third-background);
+	display: flex;
+	padding-bottom: 40px;
+}
+.expert__container {
+	display: flex;
+}
+.expert__opinion-article {
+	padding-top: clamp(20px, 0.991rem + 1.26vw, 40px);
+}
+.expert__opinion-title {
+	font-size: clamp(20px, 0.965rem + 1.38vw, 42px);
+}
+
+.expert__opinion-text {
+	max-width: 670px;
+	font-size: clamp(18px, 0.672rem + 0.38vw, 12px);
+	line-height: 140%;
+	padding-bottom: clamp(10px, 0.581rem + 0.82vw, 25px);
+}
+.expert__opinion-text:last-child {
+	margin-bottom: 0;
+}
+
+@media (width <=1200px) {
+	.expert__opinion-article-img {
+		display: none;
+	}
+	.expert__opinion-text {
+		max-width: none;
+	}
+}

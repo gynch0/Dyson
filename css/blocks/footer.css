@@ -1,0 +1,117 @@
+.footer {
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+	padding-block: clamp(16px, 0.526rem + 2.17vw, 50px)
+		clamp(20px, 0.721rem + 2.42vw, 58px);
+}
+.footer__wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	gap: 30px;
+}
+.footer__info {
+	color: inherit;
+}
+.footer__about {
+	padding-top: 25px;
+}
+.footer__info-title {
+	padding-top: 30px;
+}
+.footer__about,
+.footer__info-title {
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: clamp(0.75rem, 0.088rem + 1.18vw, 1.5rem);
+	padding-bottom: 10px;
+	transition: transform var(--transition-time);
+	cursor: pointer;
+}
+.footer__info-text {
+	font-family: var(--font-family);
+	font-weight: 300;
+	font-size: clamp(10px, 0.184rem + 0.78vw, 18px);
+	line-height: 140%;
+	cursor: pointer;
+	transition:
+		background-color var(--transition-time),
+		border-radius var(--transition-time);
+}
+.footer__info-title-logistics {
+	cursor: pointer;
+	transition: transform var(--transition-time);
+}
+@media (any-hover: hover) {
+	.footer__info-text:hover {
+		background-color: #d9d9d9d9;
+		border-radius: 3px;
+	}
+	.footer__about:hover,
+	.footer__info-title-logistics:hover,
+	.footer__info-title:hover {
+		transform: scale(1.05);
+	}
+	.footer__info-tel:hover {
+		color: #d9d9d9d9;
+	}
+}
+.footer__info-copy {
+	padding-top: 85px;
+	font-size: clamp(10px, 0.184rem + 0.78vw, 15px);
+}
+.footer__info-title-logistics,
+.footer__info-tel {
+	/* padding-top: 30px;
+	position: relative; */
+
+	/* right: 253px; */
+	font-family: var(--second-family);
+	font-weight: 900;
+	font-size: clamp(12px, 0.583rem + 0.76vw, 24px);
+	line-height: 150%;
+	color: #fff;
+	/* min-width: 122px; */
+}
+.footer__info-title-logistics {
+	padding-top: 30px;
+}
+.footer__info-tel {
+	font-size: clamp(11px, 0.548rem + 0.64vw, 21px);
+	transition: color var(--transition-time);
+}
+.footer__flex {
+	display: flex;
+}
+.footer__flex-left {
+	padding-right: 45px;
+}
+.footer__wrapper-about {
+	display: flex;
+	flex-direction: column;
+}
+@media (width <960px) {
+	.footer__wrapper {
+		align-items: flex-start;
+	}
+	.footer__info-title-top {
+		padding-top: 0;
+	}
+	.footer__logo img {
+		width: 73px;
+		height: 31px;
+	}
+}
+@media (width <=711px) {
+	.footer__wrapper {
+		flex-wrap: wrap;
+		justify-content: start;
+		gap: 15px;
+	}
+	.footer__info-title-top-two {
+		padding-top: 0;
+	}
+	.footer__info-copy {
+		padding-top: 17px;
+	}
+}
